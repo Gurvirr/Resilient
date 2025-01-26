@@ -1,15 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Home() {
+  const reports = [
+    { location: "Downtown", report: "Fire spotted near Downtown. Stay cautious!" },
+    { location: "Maple Street", report: "Flooding reported on Maple Street. Avoid if possible." },
+    { location: "Central Park", report: "Air quality is poor in Central Park. Consider wearing a mask." },
+    { location: "Westside", report: "Power outage in Westside." },
+    { location: "Hillside Road", report: "Road blocked due to landslide at Hillside Road." },
+    { location: "Route 66", report: "Heavy snowfall causing road closures on Route 66." },
+    { location: "Green Valley", report: "Earthquake felt in Green Valley. Check for updates!" },
+    { location: "East Lake", report: "Tornado sighted near East Lake. Seek shelter immediately!" },
+    { location: "Sunset Trail", report: "Wildlife spotted near Sunset Trail. Stay safe!" },
+    { location: "City Center", report: "Extreme heat warning in City Center. Stay hydrated!" },
+    { location: "Windy Avenue", report: "Strong winds causing debris in Windy Avenue. Drive carefully." },
+    { location: "Northside", report: "Hailstorm reported in Northside." },
+    { location: "Riverbank", report: "Water contamination advisory for Riverbank." },
+    { location: "Bayview", report: "Evacuation recommended for Bayview due to flooding." },
+    { location: "Forest Ridge", report: "Smoke from wildfires affecting Forest Ridge. Air quality hazardous." }
+  ];
+
+  const [currentReportIndex, setCurrentReportIndex] = useState(0);
+
+  const handleNextReport = () => {
+    setCurrentReportIndex((prevIndex) => 
+      prevIndex === reports.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePreviousReport = () => {
+    setCurrentReportIndex((prevIndex) => 
+      prevIndex === 0 ? reports.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div>
       <div className="new-rectangle">
         <p className="recent-reports-title">RECENT REPORTS</p>
         <div className="custom-rectangle">
-          hello there is a fire in california omg omg omg omg omg omg omg om fire fire fire test test
+          <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
+            {reports[currentReportIndex].location}
+          </div>
+          {reports[currentReportIndex].report}
         </div>
         <div className="additional-box">
-          <button className="icon previous-icon">
+          <button className="icon previous-icon" onClick={handlePreviousReport}>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
               <path d="M15 7.5L7.5 15L15 22.5" stroke="#F8F8F8" stroke-width="2.5" />
               <path d="M22.5 7.5L15 15L22.5 22.5" stroke="#F8F8F8" stroke-width="2.5" />
@@ -29,7 +64,7 @@ function Home() {
               <path d="M26.0417 28.125L13.5475 28.125C12.1589 28.125 11.159 26.7923 11.5473 25.4591L15.1879 12.9591C15.4469 12.0698 16.2619 11.4583 17.1881 11.4583L25.1787 11.4583C25.7312 11.4583 26.2612 11.6778 26.6519 12.0685L27.5148 12.9315C27.9055 13.3222 28.4354 13.5417 28.9879 13.5417L32.2917 13.5417" stroke="#F8F8F8" stroke-width="2.08333" stroke-linecap="round" />
             </svg>
           </button>
-          <button className="icon next-icon">
+          <button className="icon next-icon" onClick={handleNextReport}>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
               <path d="M15 22.5L22.5 15L15 7.5" stroke="#F8F8F8" stroke-width="2.5" />
               <path d="M7.5 22.5L15 15L7.5 7.5" stroke="#F8F8F8" stroke-width="2.5" />
