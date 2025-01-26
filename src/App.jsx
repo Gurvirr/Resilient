@@ -1,19 +1,10 @@
+// src/App.js
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-
-// Components for each page
-function AlertPage() {
-  return <div>Alert</div>;
-}
-
-function HomePage() {
-  return <div>Home</div>;
-}
-
-function MapPage() {
-  return <div>Map</div>;
-}
+import Home from './components/Home';
+import Map from './components/Map';
+import Alerts from './components/Alerts';
 
 function App() {
   const [activeButton, setActiveButton] = useState('center'); // Default is the center button
@@ -24,9 +15,6 @@ function App() {
 
   return (
     <Router>
-      <div className="new-rectangle">
-        {/* Add content for the new rectangle here */}
-      </div>
 
       <div className="rounded-rectangle">
         <div className="red-circle-left"></div>
@@ -109,9 +97,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/alert" element={<AlertPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/map" element={<MapPage />} />
+        <Route path="/alert" element={<Alerts />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
     </Router>
   );
