@@ -1,21 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .rounded-rectangle {
   width: 230px;
   height: 76px;
   background-color: #f1f1f1;
-  border-radius: 12px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-left,
+.icon-center,
+.icon-right {
+  margin-left: 18px;
+  margin-right: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #181818;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 1rem auto;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
 }
 
+.circle {
+  width: 76px;
+  height: 76px;
+  background-color: #181818;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.red-circle-left,
+.red-circle-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 76px;
+  height: 76px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.red-circle-left {
+  left: 0px;
+}
+
+.red-circle-right {
+  right: 0px;
+}
+
+.circle-button {
+  width: 76px;
+  height: 76px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: #181818;
+}
