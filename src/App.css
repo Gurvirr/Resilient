@@ -1,3 +1,14 @@
+.main-title {
+  font-size: 70px;
+  font-family: Slagless;
+  color: #181818;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
 .rounded-rectangle {
   width: 230px;
   height: 76px;
@@ -66,11 +77,98 @@
   background: var(--RESILIENT, linear-gradient(226deg, #BDF7E9 33.75%, #8E92FE 99.71%));
   border: 1px solid #181818;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 20px; /* Add padding for inner spacing */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+  gap: 10px; /* Add spacing between children */
 }
+
+.recent-reports-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #181818;
+  margin: 0; /* Remove default margin */
+  align-self: flex-start; /* Ensure alignment to the left */
+}
+
+.custom-rectangle {
+  border-radius: 0px 30px 30px 30px;
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20.4px);
+  width: 309px;
+  height: 131px;
+  color: #f1f1f1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.additional-box {
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20.4px);
+  width: 210px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.icon:active {
+  background-color: rgba(255, 255, 255, 0.1); /* Light active effect */
+  transform: scale(1.1); /* Slight zoom effect on active */
+}
+
+.icon:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.additional-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Take full width of parent */
+  height: 100%; /* Take full height of parent */
+}
+
+button {
+  all: unset; /* Resets all default button styles */
+  cursor: pointer; /* Keeps the pointer cursor for clickable buttons */
+  display: flex; /* Makes the button a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  border-radius: 50%; /* Makes the button round */
+  background-color: transparent; /* Remove background */
+}
+
+button:focus,
+button:active {
+  outline: none; /* Removes the outline */
+  border: none; /* Removes any border */
+  box-shadow: none; /* Removes any box-shadow */
+}
+

@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Alert() {
+function Alerts() {
   return (
     <div>
-      <h1>Alert Page</h1>
+      <h1>Alerts Page</h1>
+      <p>Here are your alerts!</p>
     </div>
   );
 }
 
-export default Alert;
+export default Alerts;
