@@ -1,13 +1,33 @@
+:root {
+  --navbar-height: 76px;
+  --navbar-margin: 20px;
+  --title-height: 110px; /* Accounts for the main title and some spacing */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  padding-top: var(--title-height);
+  padding-bottom: calc(var(--navbar-height) + var(--navbar-margin) * 2);
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
 .main-title {
   font-size: 70px;
   font-family: Slagless;
   color: #181818;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
   text-align: center;
+  z-index: 1000;
 }
 
 .rounded-rectangle {
@@ -18,10 +38,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: var(--navbar-margin);
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1000;
 }
 
 .icon-left,
@@ -203,11 +224,8 @@ button:active {
 }
 
 .map-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100vw;
+  height: calc(100vh - var(--title-height) - var(--navbar-height) - var(--navbar-margin) * 2);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -227,6 +245,7 @@ button:active {
 /* New styles for the Alerts component */
 .container {
   text-align: center;
+  padding-bottom: calc(var(--navbar-height) + var(--navbar-margin));
 }
 
 input, 
