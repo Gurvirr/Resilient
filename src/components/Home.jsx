@@ -75,12 +75,27 @@ function Home() {
 
       <div className="new-rectangle" style={{width: '350px', height: '160px', marginTop: '20px'}}>
         <p className="recent-reports-title">SUPPORT</p>
-        <div className="custom-rectangle" style={{width: '130px', height: '100px', borderRadius: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <a 
+          href="tel:289-401-8339" 
+          className="custom-rectangle" 
+          style={{
+            width: '130px', 
+            height: '100px', 
+            borderRadius: '30px', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: '#F8F8F8',
+            cursor: 'pointer'
+          }}
+        >
           Voice Assistant
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
             <path d="M36.8898 28.5565L42.4067 34.0734C43.1486 34.8153 43.1486 36.0181 42.4067 36.7599C38.3959 40.7708 32.0461 41.2221 27.5083 37.8187L24.2262 35.3571C20.5938 32.6329 17.3671 29.4062 14.6429 25.7738L12.1813 22.4917C8.77793 17.9539 9.22919 11.6041 13.2401 7.59327C13.9819 6.8514 15.1847 6.8514 15.9266 7.59327L21.4435 13.1102C22.2571 13.9238 22.2571 15.2429 21.4435 16.0565L19.3161 18.1839C18.978 18.522 18.8942 19.0385 19.1081 19.4661C21.5803 24.4105 25.5895 28.4197 30.5339 30.8919C30.9615 31.1058 31.478 31.022 31.8161 30.6839L33.9435 28.5565C34.7571 27.7429 36.0762 27.7429 36.8898 28.5565Z" stroke="#F8F8F8" stroke-width="2.08333"/>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   );

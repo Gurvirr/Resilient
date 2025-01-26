@@ -7,6 +7,7 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
+  text-align: center;
 }
 
 .rounded-rectangle {
@@ -94,6 +95,8 @@
   color: #181818;
   margin: 0;
   align-self: flex-start;
+  text-align: center;
+  width: 100%;
 }
 
 .custom-rectangle {
@@ -107,6 +110,7 @@
   padding: 10px;
   box-sizing: border-box;
   margin: 0 auto;
+  text-align: center;
 }
 
 .additional-box {
@@ -122,6 +126,7 @@
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
+  text-align: center;
 }
 
 .icon {
@@ -169,4 +174,95 @@ button:active {
   outline: none;
   border: none;
   box-shadow: none;
+}
+
+.map-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.map-container input:focus {
+  outline: none;
+  border-color: #8E92FE;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20.4px);
+  color: #f1f1f1;
+}
+
+.leaflet-popup-tip {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.map-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.form-container {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* New styles for the Alerts component */
+.container {
+  text-align: center;
+}
+
+input, 
+textarea {
+  text-align: center;
+}
+
+label {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+/* Alert Submit Button Styles */
+button[type="submit"] {
+  all: unset;
+  cursor: pointer;
+  background-color: #181818;
+  color: #f8f8f8;
+  border-radius: 9999px;
+  text-align: center;
+  padding: 12px 48px;
+  width: 192px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
 }
