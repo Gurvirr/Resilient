@@ -1,7 +1,7 @@
 :root {
   --navbar-height: 76px;
   --navbar-margin: 20px;
-  --title-height: 110px; /* Accounts for the main title and some spacing */
+  --title-height: 90px; /* Reduced from 110px */
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   font-family: Slagless;
   color: #181818;
   position: fixed;
-  top: 20px;
+  top: 10px; /* Reduced from 20px */
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
