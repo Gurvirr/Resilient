@@ -100,6 +100,7 @@ function App() {
         <Routes>
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
         </Routes>
       </div>
