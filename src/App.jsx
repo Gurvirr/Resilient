@@ -18,8 +18,8 @@ function App() {
         <p className="main-title">Resilient</p>
         
         <div className="rounded-rectangle">
-          <div className="red-circle-left"></div>
-          <div className="red-circle-right"></div>
+          <div className="circle-right"></div>
+          <div className="circle-right"></div>
           <div className="circle"></div>
 
           <div className="icon-left">

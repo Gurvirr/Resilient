@@ -35,15 +35,15 @@ function Home() {
 
   return (
     <div>
-      <div className="new-rectangle">
+      <div className="card-container">
         <p className="recent-reports-title">RECENT REPORTS</p>
-        <div className="custom-rectangle">
+        <div className="text-container">
           <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
             {reports[currentReportIndex].location}
           </div>
           {reports[currentReportIndex].report}
         </div>
-        <div className="additional-box">
+        <div className="recent-reports-controls">
           <button className="icon previous-icon" onClick={handlePreviousReport}>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
               <path d="M15 7.5L7.5 15L15 22.5" stroke="#F8F8F8" stroke-width="2.5" />
@@ -73,12 +73,9 @@ function Home() {
         </div>
       </div>
 
-      <div className="new-rectangle" style={{width: '350px', height: '160px', marginTop: '20px'}}>
+      <div className="card-container" style={{width: '350px', height: '160px', marginTop: '20px'}}>
         <p className="recent-reports-title">SUPPORT</p>
-        <a 
-          href="tel:289-401-8339" 
-          className="custom-rectangle" 
-          style={{
+        <a href="tel:289-401-8339" className="text-container" style={{
             width: '130px', 
             height: '100px', 
             borderRadius: '30px', 

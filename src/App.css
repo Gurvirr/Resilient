@@ -58,8 +58,8 @@ body {
   z-index: 3;
 }
 
-.red-circle-left,
-.red-circle-right {
+.circle-right,
+.circle-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -68,11 +68,11 @@ body {
   border-radius: 50%;
 }
 
-.red-circle-left {
+.circle-right {
   left: 0px;
 }
 
-.red-circle-right {
+.circle-right {
   right: 0px;
 }
 
@@ -93,7 +93,7 @@ body {
   background-color: #181818;
 }
 
-.new-rectangle {
+.card-container {
   width: 351px;
   height: 270px;
   background: var(--RESILIENT, linear-gradient(226deg, #BDF7E9 33.75%, #8E92FE 99.71%));
@@ -120,7 +120,7 @@ body {
   width: 100%;
 }
 
-.custom-rectangle {
+.text-container {
   border-radius: 0px 30px 30px 30px;
   border: 1px solid #000;
   background: rgba(0, 0, 0, 0.85);
@@ -134,7 +134,7 @@ body {
   text-align: center;
 }
 
-.additional-box {
+.recent-reports-controls {
   border-radius: 20px;
   border: 1px solid #000;
   background: rgba(0, 0, 0, 0.85);
@@ -170,7 +170,7 @@ body {
   transform: scale(1.1);
 }
 
-.additional-box-wrapper {
+.recent-reports-controls-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
